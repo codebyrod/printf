@@ -6,7 +6,7 @@
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 22:18:19 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/08 20:39:43 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/11 19:12:25 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,9 @@ int	ft_printf(const char *format, ...)
 			write(1, &(format[i]), 1);
 		if(format[i] == '%')
 		{
-			ft_delimiter(format[++i], ap);
-			// printf("Estou no id do %%\n");
-			// if(format[i + 1] == 'c')
-			// {
-			// 	// printf("Estou no id do C\n");
-			// 	letter = va_arg(ap, int);
-			// 	ft_pf_putchar (letter);
-			// 	i++;
-				// printf("Estou no id do C\n");
-			// }
+			i++;
+			ft_delimiter(format[i], ap);
+
 			// if(format[i] == 'd')
 			// {
 			// 	// printf("Estou no id do D\n");

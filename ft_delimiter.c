@@ -6,7 +6,7 @@
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 18:04:15 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/08 20:37:44 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/11 19:19:41 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,19 @@
 
 int	ft_delimiter(const char str, va_list ap)
 {
+	
 	if(str == 'c')
 		ft_putchar(va_arg(ap, int));
 	if(str == 's')
 	{
-		printf("DELIM: S\n");
+		// printf("DELIM: S\n");
 		ft_putstr(va_arg(ap, char *));
 	}
 	if(str == 'd')
+	{
 		printf("DELIM: D\n");
 		// putnbr(va_arg(ap, char *));
+	}
 	if(str == 'i')
 		printf("DELIM: I\n");
 		// putnbr(va_arg(ap, char *));
