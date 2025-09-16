@@ -6,7 +6,7 @@
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 22:18:19 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/11 19:12:25 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/11 20:35:59 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 int	ft_printf(const char *format, ...)
 {
 	int i;
-	int j;
 	// int number;
 	// char *str_number;
 	// char lt;
 	i = 0;
-	j = 0;
 	va_list ap;
 	va_start(ap, format);
 
@@ -52,7 +50,10 @@ int	ft_printf(const char *format, ...)
 			// }
 		}
 		if (format[i] == '\n')
+		{
+			// write(1, "\n", 1);
 			write(1, "\n", 1);
+		}
 		i++;
 	}
 	return (10);

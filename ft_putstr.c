@@ -6,16 +6,16 @@
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 19:55:19 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/11 18:58:06 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/12 17:01:55 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-index my_index = {.i = 0};
 
 int ft_putstr(char *str)
 {
+	t_index my_index = {.i = 0};
 	while(str[my_index.i])
 	{
 		ft_putchar(str[my_index.i]);

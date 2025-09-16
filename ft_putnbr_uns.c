@@ -1,45 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fnc_vd_teste2.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_uns.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/03 21:54:10 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/03 22:17:39 by rosousa-         ###   ########.fr       */
+/*   Created: 2025/09/12 17:04:26 by rosousa-          #+#    #+#             */
+/*   Updated: 2025/09/15 21:37:39 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdarg.h>
+#include "printf.h"
 
-int ft_media(int n, ...)
+int ft_putnbr_uns(unsigned int n)
 {
-	int soma;
-	int media;
-	int i;
-	va_list ap;
-
-	i = 0;
-	soma = 0;
-	va_start(ap, n);
-
-	while(i < n)
-	{
-		soma = soma + va_arg(ap, int);
-		i++;
-	}
-	media = soma / n;
-
-	return (media);
-}
-
-int main()
-{
-	int media;
-	
-	media = ft_media(3, 10, 20, 30);
-	printf("resultado: %d\n", media);
-
-	return (0);
+	// unsigned int nb;
+	// nb = n;
+	// printf("imprime n:%u\n", n);
+	// printf("imprime nb:%u\n", nb);
+	char *new_str;
+	new_str = ft_itoa_uns(n);
+	ft_putstr(new_str);
+	return (1);
 }

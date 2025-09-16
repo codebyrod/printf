@@ -6,7 +6,7 @@
 #    By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/03 22:45:14 by rosousa-          #+#    #+#              #
-#    Updated: 2025/09/08 20:23:45 by rosousa-         ###   ########.fr        #
+#    Updated: 2025/09/12 22:17:34 by rosousa-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ SRC = \
 	ft_delimiter.c \
 	ft_putchar.c \
 	ft_putstr.c \
+	ft_putnbr.c \
+	ft_putnbr_uns.c \
 	libft/ft_atoi.c \
 	libft/ft_bzero.c \
 	libft/ft_calloc.c \
@@ -53,6 +55,8 @@ SRC = \
 	libft/ft_substr.c \
 	libft/ft_tolower.c \
 	libft/ft_toupper.c \
+	libft/ft_count_digit.c \
+	libft/ft_itoa_uns.c \
 
 OBJS = $(SRC:.c=.o)
 
@@ -71,3 +75,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
