@@ -6,7 +6,7 @@
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 18:04:15 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/12 21:47:11 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/18 17:35:46 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,34 @@
 
 //colocar como struct
 
-int	ft_delimiter(const char str, va_list ap)
+int	ft_delimiter(const char spec, va_list ap)
 {
 	
-	if(str == 'c')
+	if(spec == 'c')
 		ft_putchar(va_arg(ap, int));
-	if(str == 's')
+	if(spec == 's')
 	{
 		// printf("DELIM: S\n");
-		ft_putstr(va_arg(ap, char *));
+		ft_putspec(va_arg(ap, char *));
 	}
-	if(str == 'd' || str == 'i')
+	if(spec == 'd' || spec == 'i')
 	{
 		// printf("DELIM: D\n");
 		ft_putnbr(va_arg(ap, int));
 	}
-	if(str == 'u')
+	if(spec == 'u')
 	{
 		// printf("DELIM: U\n");
 		ft_putnbr_uns(va_arg(ap, unsigned int));
 	}
 		// putnbr(va_arg(ap, char *));
-	if(str == 'p')
-		printf("DELIM: P\n");
+	if(spec == 'x' || spec == 'X' || spec == 'p')
+	{
+		ft_hexadecimal(va_arg(ap, unsigned long), spec);
+
+		// printf("DELIM: x minúsculo\n");
 		// putnbr(va_arg(ap, char *));
-	if(str == 'x')
-		printf("DELIM: x minúsculo\n");
-		// putnbr(va_arg(ap, char *));
-	if(str == 'X')
-		printf("DELIM: X maiúsculo\n");
-		// putnbr(va_arg(ap, char *));
+	}
 	
 	return(1);
 }

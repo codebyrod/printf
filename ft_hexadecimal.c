@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_hexadecimal.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/11 19:30:19 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/15 22:45:56 by rosousa-         ###   ########.fr       */
+/*   Created: 2025/09/16 17:53:21 by rosousa-          #+#    #+#             */
+/*   Updated: 2025/09/18 17:30:12 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int ft_putnbr(int n)
+int ft_hexadecimal(unsigned long hx, const char str)
 {
-	char *new_str;
-	new_str = ft_itoa(n);
-	ft_putstr(new_str);
-	free(new_str);
-	return(10);
+	char *base = "0123456789abcdef";
+	if(str == 'X')
+		base = "0123456789ABCDEF";
+	if(hx < 16)
+	{
+		ft_putchar(base[hx]);
+	}
+	else
+	{	
+		ft_hexadecimal(hx/16, str); 
+		ft_hexadecimal(hx % 16, str);
+	}
+	return (10);
 }

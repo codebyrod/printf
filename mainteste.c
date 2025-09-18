@@ -6,7 +6,7 @@
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 18:09:14 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/15 22:43:41 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/18 17:29:00 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@ int main()
 {
 	// char letter1;
 	// char letter2;
-	char phrase1[8] = "Rodrigo";
-	char phrase2[8] = "Ogirdor";
-	// int num1;
-	// int num2;
-	int num3;
-	int num4;
-	char *point1;
-	char *point2;
+	// char phrase1[8] = "Rodrigo";
+	// char phrase2[8] = "Ogirdor";
+	unsigned long num1;
+	unsigned long num2;
+	// int num3;
+	// int num4;
+	// char *point1;
+	// char *point2;
 	
-	// num1 = 12345;
-	// num2 = 67890;
+	num1 = 123458;
+	num2 = 678908;
 	// num3 = -24680;
 	// num4 = -13579;
 	// letter1 = 'a';
@@ -36,8 +36,9 @@ int main()
 
 
 	printf("-----------MINHA printf-----------\n");
-	ft_printf("Primeiro array %p.\nSegundo array %p\n", phrase1, phrase2);
-	ft_printf("Primeiro pointer %p.\nSegundo pointer %p\n", point1, point2);
+	ft_printf("p: Primeiro num %p.\nSegundo num %p\n", &num1, &num2);
+	// ft_printf("Primeiro array %p.\nSegundo array %p\n", phrase1, phrase2);
+	// ft_printf("Primeiro pointer %p.\nSegundo pointer %p\n", point1, point2);
 	// ft_printf("U: Primeiro num %u.\nSegundo num %u\n", num3, num4);
 	// ft_printf("D: Primeiro num %d.\nSegundo num %d\n", num3, num4);
 	// ft_printf("I: Primeiro num %i.\nSegundo num %i\n", num3, num4);
@@ -46,8 +47,9 @@ int main()
 	// ft_printf("teste letra1 %c, teste letra2 %c, como vai? teste fr1: %s, teste fr2: %s\n", letter1, letter2, phrase2, phrase1);
 	
 	printf("-----------ORIGINAL printf-----------\n");
-	printf("Primeiro array %p.\nSegundo array %p\n", phrase1, phrase2);
-	printf("Primeiro pointer %p.\nSegundo pointer %p\n", point1, point2);
+	printf("p: Primeiro num %p.\nSegundo num %p\n", &num1, &num2);
+	// printf("Primeiro array %p.\nSegundo array %p\n", phrase1, phrase2);
+	// printf("Primeiro pointer %p.\nSegundo pointer %p\n", point1, point2);
 	// printf("Primeiro num %u.\nSegundo num %u\n", num3, num4);
 	// printf("Primeiro num %d.\nSegundo num %d\n", num3, num4);
 	// printf("I: Primeiro num %i.\nSegundo num %i\n", num3, num4);

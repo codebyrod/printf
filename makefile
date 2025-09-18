@@ -6,7 +6,7 @@
 #    By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/03 22:45:14 by rosousa-          #+#    #+#              #
-#    Updated: 2025/09/12 22:17:34 by rosousa-         ###   ########.fr        #
+#    Updated: 2025/09/18 16:51:59 by rosousa-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ SRC = \
 	ft_putstr.c \
 	ft_putnbr.c \
 	ft_putnbr_uns.c \
+	ft_putpointer.c \
+	ft_hexadecimal.c \
 	libft/ft_atoi.c \
 	libft/ft_bzero.c \
 	libft/ft_calloc.c \
