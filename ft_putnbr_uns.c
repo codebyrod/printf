@@ -6,7 +6,7 @@
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 17:04:26 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/15 21:37:39 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/18 20:01:17 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ int ft_putnbr_uns(unsigned int n)
 	char *new_str;
 	new_str = ft_itoa_uns(n);
 	ft_putstr(new_str);
+	free(new_str);
 	return (1);
 }

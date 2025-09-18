@@ -6,7 +6,7 @@
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 18:04:15 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/18 17:35:46 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/18 19:49:32 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_delimiter(const char spec, va_list ap)
 	if(spec == 's')
 	{
 		// printf("DELIM: S\n");
-		ft_putspec(va_arg(ap, char *));
+		ft_putstr(va_arg(ap, char *));
 	}
 	if(spec == 'd' || spec == 'i')
 	{
@@ -37,8 +37,12 @@ int	ft_delimiter(const char spec, va_list ap)
 		// putnbr(va_arg(ap, char *));
 	if(spec == 'x' || spec == 'X' || spec == 'p')
 	{
+		if(spec == 'p')
+		{
+			ft_putchar('0');
+			ft_putchar('x');
+		}
 		ft_hexadecimal(va_arg(ap, unsigned long), spec);
-
 		// printf("DELIM: x minúsculo\n");
 		// putnbr(va_arg(ap, char *));
 	}
