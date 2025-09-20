@@ -6,21 +6,19 @@
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 17:04:26 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/18 20:01:17 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/19 19:48:38 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int ft_putnbr_uns(unsigned int n)
 {
-	// unsigned int nb;
-	// nb = n;
-	// printf("imprime n:%u\n", n);
-	// printf("imprime nb:%u\n", nb);
+	t_index my_iter = {0};
 	char *new_str;
 	new_str = ft_itoa_uns(n);
 	ft_putstr(new_str);
+	my_iter.count += ft_strlen(new_str);
 	free(new_str);
-	return (1);
+	return (my_iter.count);
 }

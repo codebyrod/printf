@@ -6,13 +6,15 @@
 #    By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/03 22:45:14 by rosousa-          #+#    #+#              #
-#    Updated: 2025/09/18 20:09:15 by rosousa-         ###   ########.fr        #
+#    Updated: 2025/09/19 19:52:46 by rosousa-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
 CCFLAGS = -Wall -Werror -Wextra
 NAME = libftprintf.a
+SEARCH = libft/libft.a
+
 
 SRC = \
 	ft_printf.c \
@@ -22,29 +24,28 @@ SRC = \
 	ft_putnbr.c \
 	ft_putnbr_uns.c \
 	ft_hexadecimal.c \
-	libft/ft_bzero.c \
-	libft/ft_calloc.c \
-	libft/ft_itoa.c \
-	libft/ft_strdup.c \
-	libft/ft_strlcpy.c \
-	libft/ft_strlen.c \
-	libft/ft_count_digit.c \
-	libft/ft_itoa_uns.c \
+
 OBJS = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(SEARCH)
+	cp $(SEARCH) ./$(NAME)
 	ar rcs $(NAME) $(OBJS)
+
+$(SEARCH):
+	$(MAKE) -C libft/ all
 
 %.o: %.c
 	$(CC) $(CCFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
+	$(MAKE) -C libft/ clean
 
 fclean: clean
 	rm -f $(NAME)
+	$(MAKE) -C libft/ fclean
 
 re: fclean all
 

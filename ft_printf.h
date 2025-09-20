@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 22:28:55 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/18 19:30:15 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/19 19:48:01 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 #include "libft/libft.h"
 #include <stdio.h> // APAGARrrrrr
@@ -20,7 +20,7 @@
 typedef struct s_index
 {
 	int i;
-	int j;
+	int count;
 }	t_index;
 
 int	ft_printf(const char *format, ...);
