@@ -6,13 +6,13 @@
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 17:53:21 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/19 19:48:38 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/20 18:46:32 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_hexadecimal(unsigned long hx, const char spec)
+int ft_hexadecimal(unsigned int hx, const char spec)
 {
 	t_index my_iter = {0};
 

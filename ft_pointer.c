@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_pointer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/08 19:55:19 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/20 17:12:26 by rosousa-         ###   ########.fr       */
+/*   Created: 2025/09/20 18:33:35 by rosousa-          #+#    #+#             */
+/*   Updated: 2025/09/20 19:11:41 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putstr(char *str)
+int	ft_pointer(unsigned long p)
 {
 	t_index my_iter = {0};
-	if(str == NULL)
-		str = "(null)";
+	char *base = "0123456789abcdef";
 
-	while(str[my_iter.i])
+	// if(p == 0)
+	// {
+	// 	my_iter.count = ft_putstr("(nil)");
+	// 	return (my_iter.count);
+	// }
+
+	if ((p < 16))
 	{
-		my_iter.count += ft_putchar(str[my_iter.i]);
-		my_iter.i++;
+		my_iter.count += ft_putchar(base[p]);
 	}
+	else
+	{	
+		my_iter.count += ft_pointer(p / 16); 
+		my_iter.count += ft_pointer(p % 16);
+	}
+	
 	return (my_iter.count);
 }

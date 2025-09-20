@@ -15,6 +15,7 @@
 
 #include "libft/libft.h"
 #include <stdio.h> // APAGARrrrrr
+#include <limits.h> /// PERGUNTAR SE PODEMOS APAGAR?
 #include <stdarg.h>
 
 typedef struct s_index
@@ -29,7 +30,8 @@ int	ft_putchar(int n);
 int	ft_putstr(char *str);
 int	ft_putnbr(int n);
 int	ft_putnbr_uns(unsigned int n);
-int ft_hexadecimal(unsigned long hx, const char str);
+int ft_hexadecimal(unsigned int hx, const char str);
+int	ft_pointer(unsigned long p);
 
 #endif
 

@@ -6,7 +6,7 @@
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 18:04:15 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/19 20:01:18 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/20 19:09:54 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,17 @@ int	ft_delimiter(const char spec, va_list ap)
 		my_iter.count += ft_putnbr_uns(va_arg(ap, unsigned int));
 		// printf("Del: U: %d\n", my_iter.count);
 	}
-	if(spec == 'x' || spec == 'X' || spec == 'p')
+	if(spec == 'x' || spec == 'X')
 	{
-		if(spec == 'p')
-		{
-			my_iter.count += ft_putchar('0');
-			my_iter.count += ft_putchar('x');
-		}
-		my_iter.count += ft_hexadecimal(va_arg(ap, unsigned long), spec);
+		
+		my_iter.count += ft_hexadecimal(va_arg(ap, unsigned int), spec);
 		// printf("TESTE: %d\n", teste);
+	}
+	if(spec == 'p')
+	{
+		my_iter.count += ft_putchar('0');
+		my_iter.count += ft_putchar('x');
+		my_iter.count += ft_pointer(va_arg(ap, unsigned long));
 	}
 	if(spec == '%')
 		my_iter.count += putchar('%');
