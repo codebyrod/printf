@@ -13,9 +13,7 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-#include "libft/libft.h"
-#include <stdio.h> // APAGARrrrrr
-#include <limits.h> /// PERGUNTAR SE PODEMOS APAGAR?
+#include "libft/ft_libft.h"
 #include <stdarg.h>
 
 typedef struct s_index
@@ -32,6 +30,7 @@ int	ft_putnbr(int n);
 int	ft_putnbr_uns(unsigned int n);
 int ft_hexadecimal(unsigned int hx, const char str);
 int	ft_pointer(unsigned long p);
+int	ft_handle_pointer(unsigned long p);
 
 #endif
 

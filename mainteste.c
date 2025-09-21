@@ -6,11 +6,12 @@
 /*   By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 18:09:14 by rosousa-          #+#    #+#             */
-/*   Updated: 2025/09/20 17:44:48 by rosousa-         ###   ########.fr       */
+/*   Updated: 2025/09/20 23:03:22 by rosousa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <limits.h>
 
 int main()
 {
@@ -205,7 +206,80 @@ int main()
 	// countp9 = printf("p: Primeiro num %p.\nSegundo num %p\n", &num1, &num2);
 	// printf("RETORNO DA PRINT ORIGINAL: %d\n", countp9);
 
-	printf("RODANDO OS TESTES\n");
+	// printf("RODANDO OS TESTES\n");
+
+	// printf("\n \n \n");
+
+	// printf("Testes de Porcentagens\n");
+
+	// printf("-----------TESTE POR100: 1-----------\n");
+	// printf("-----------MINHA printf-----------\n");
+	// countp0 = ft_printf(" %% \n");
+	// printf("RETORNO DA MINHA PRINT: %d\n", countp0);
+	// printf("-----------ORIGINAL printf-----------\n");
+	// countp0 = printf(" %% \n");
+	// printf("RETORNO DA PRINT ORIGINAL: %d\n", countp0);
+
+	// printf("\n \n \n");
+
+	// printf("-----------TESTE POR100: 2-----------\n");
+	// printf("-----------MINHA printf-----------\n");
+	// countp0 = ft_printf(" %%%% \n");
+	// printf("RETORNO DA MINHA PRINT: %d\n", countp0);
+	// printf("-----------ORIGINAL printf-----------\n");
+	// countp0 = printf(" %%%% \n");
+	// printf("RETORNO DA PRINT ORIGINAL: %d\n", countp0);
+
+	// printf("\n \n \n");
+
+	// printf("-----------TESTE POR100: 3-----------\n");
+	// printf("-----------MINHA printf-----------\n");
+	// countp0 = ft_printf(" %% %% %% \n");
+	// printf("RETORNO DA MINHA PRINT: %d\n", countp0);
+	// printf("-----------ORIGINAL printf-----------\n");
+	// countp0 = printf(" %% %% %% \n");
+	// printf("RETORNO DA PRINT ORIGINAL: %d\n", countp0);
+
+	// printf("\n \n \n");
+
+	// printf("-----------TESTE POR100: 4-----------\n");
+	// printf("-----------MINHA printf-----------\n");
+	// countp0 = ft_printf(" %%  %%  %% \n");
+	// printf("RETORNO DA MINHA PRINT: %d\n", countp0);
+	// printf("-----------ORIGINAL printf-----------\n");
+	// countp0 = printf(" %%  %%  %% \n");
+	// printf("RETORNO DA PRINT ORIGINAL: %d\n", countp0);
+
+	// printf("\n \n \n");
+
+	// printf("-----------TESTE POR100: 5-----------\n");
+	// printf("-----------MINHA printf-----------\n");
+	// countp0 = ft_printf(" %%   %%   %% \n");
+	// printf("RETORNO DA MINHA PRINT: %d\n", countp0);
+	// printf("-----------ORIGINAL printf-----------\n");
+	// countp0 = printf(" %%   %%   %% \n");
+	// printf("RETORNO DA PRINT ORIGINAL: %d\n", countp0);
+
+	// printf("\n \n \n");
+
+	// printf("-----------TESTE POR100: 6-----------\n");
+	// printf("-----------MINHA printf-----------\n");
+	// countp0 = ft_printf("%%\n");
+	// printf("RETORNO DA MINHA PRINT: %d\n", countp0);
+	// printf("-----------ORIGINAL printf-----------\n");
+	// countp0 = printf("%%\n");
+	// printf("RETORNO DA PRINT ORIGINAL: %d\n", countp0);
+
+	// printf("\n \n \n");
+
+	// printf("-----------TESTE POR100: 7-----------\n");
+	// printf("-----------MINHA printf-----------\n");
+	// countp0 = ft_printf("%% %%\n");
+	// printf("RETORNO DA MINHA PRINT: %d\n", countp0);
+	// printf("-----------ORIGINAL printf-----------\n");
+	// countp0 = printf("%% %%\n");
+	// printf("RETORNO DA PRINT ORIGINAL: %d\n", countp0);
+
 	// printf("Testes de String\n");
 
 	// printf("-----------TESTE FR: S-10-----------\n");
@@ -216,15 +290,15 @@ int main()
 	// countp0 = printf(" NULL %s NULL \n", pointnull);
 	// printf("RETORNO DA PRINT ORIGINAL: %d\n", countp0);
 
-	printf("Testes de Ponteiro\n");
+	// printf("Testes de Ponteiro\n");
 
-	printf("-----------TESTE FR: P-9-----------\n");
-	printf("-----------MINHA printf-----------\n");
-	countp0 = ft_printf(" %p %p ", pointnull, pointnull);
-	printf("RETORNO DA MINHA PRINT: %d\n", countp0);
-	printf("-----------ORIGINAL printf-----------\n");
-	countp0 = printf(" %p %p ", pointnull, pointnull);
-	printf("RETORNO DA PRINT ORIGINAL: %d\n", countp0);
+	// printf("-----------TESTE FR: P-9-----------\n");
+	// printf("-----------MINHA printf-----------\n");
+	// countp0 = ft_printf(" %p %p ", pointnull, pointnull);
+	// printf("RETORNO DA MINHA PRINT: %d\n", countp0);
+	// printf("-----------ORIGINAL printf-----------\n");
+	// countp0 = printf(" %p %p ", pointnull, pointnull);
+	// printf("RETORNO DA PRINT ORIGINAL: %d\n", countp0);
 
 // 	printf("Testes de x lowercase\n");
 

@@ -6,7 +6,7 @@
 #    By: rosousa- <rosousa-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/03 22:45:14 by rosousa-          #+#    #+#              #
-#    Updated: 2025/09/20 18:44:55 by rosousa-         ###   ########.fr        #
+#    Updated: 2025/09/20 19:32:14 by rosousa-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRC = \
 	ft_putnbr_uns.c \
 	ft_hexadecimal.c \
 	ft_pointer.c \
+	ft_handle_pointer.c \
 
 OBJS = $(SRC:.c=.o)
 
